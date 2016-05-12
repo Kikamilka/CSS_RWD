@@ -1,0 +1,103 @@
+body {
+	margin: 0;
+	padding: 0;
+	background-color: #F2F6FE;
+	font-family: Verdana;
+}
+menu {
+	background: #C4F0EF;
+}
+menu ul {
+	list-style: none; /*убираем маркеры списка*/
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;	
+	flex-wrap: wrap;
+	padding-left: 0;
+}
+menu ul li {
+	width: 14%;
+}
+menu ul li a {
+	text-decoration: none; /*убираем подчеркивание текста ссылок*/
+	text-align: center;
+	font-family: Verdana;
+	font-size: large;
+	padding: 1em;
+	display: block;
+	color: #3C9692;
+	border-right: 1px solid #F1FDFD;
+	background: rgba(146, 218, 215, .3);
+}
+
+main {
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	margin: 1em;
+	flex-flow: row wrap;
+	justify-content: space-around;
+}
+
+.conteiner_first{
+border: 1px solid #4C68A5;
+background: linear-gradient(to top, #FDFDF1, #FDE9FA);
+}
+
+.conteiner_second{
+border: 1px solid #4C68A5;
+background: linear-gradient(to top, #FDFDF1, #FDE9FA);
+}
+
+.conteiner_third{
+border: 1px solid #4C68A5;
+background: linear-gradient(to top, #FDFDF1, #FDE9FA);
+}
+
+.main_conteiner div {
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: column;
+	align-items: stretch;
+	max-width: 500px;
+}
+
+.main_conteiner div header{
+	font-size: x-large;
+	border-bottom: 1px solid #4C68A5;
+	padding: 1em;
+	background: linear-gradient(to top, #FDE9FA, #D1DDFD);
+}
+
+.main_conteiner div div{
+	padding: 1em;
+}
+
+button{
+	align-self: flex-end;
+	font-size: large;
+	padding: 0.5em;
+	margin: 2em;
+	cursor: pointer;
+}
+
+.main_conteiner div div img{
+	padding: 0.5em;
+	max-width: 500px;
+}
+
+footer {
+	text-align: center;
+	background: #FFEFD0;
+	font-size: large;
+	padding: 1em;
+	color: #FF7800
+}
