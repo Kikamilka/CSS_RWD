@@ -1,12 +1,16 @@
+html{
+	margin: 0;	
+	padding: 0;
+}
 body {
-	margin: 0;
+	margin: 0;	
 	padding: 0;
 	background-color: #F2F6FE;
 	font-family: Verdana;
 }
 
 menu {
-	margin: 10px 0;
+	margin: 0;
 	background: #C4F0EF;
 }
 menu ul {
@@ -59,29 +63,31 @@ main {
 	background: linear-gradient(to top, #FDFDF1, #FDE9FA);
 	max-width: 100%;
 	padding-left: -50px; 
+	flex: 1;
+	margin: 10px;
 }
 
 .conteiner_second{
 	border: 1px solid #4C68A5;
 	background: linear-gradient(to top, #FDFDF1, #FDE9FA);
+	flex: 1;
+	margin: 10px;
 }
 
 .conteiner_third{
 	border: 1px solid #4C68A5;
 	background: linear-gradient(to top, #FDFDF1, #FDE9FA);
+	flex: 1;
+	margin: 10px;
 }
 
 .main_conteiner div {
-	display: -webkit-flex;
-	display: -moz-flex;
-	display: -ms-flex;
-	display: -o-flex;
 	display: flex;
 	flex-wrap: wrap;
 	flex-direction: column;
 	align-items: stretch;
-	max-width: 30em;
 	align-content: stretch;
+	justify-content: space-between;
 }
 
 .main_conteiner div header{
@@ -91,15 +97,16 @@ main {
 	background: linear-gradient(to top, #FDE9FA, #D1DDFD);
 }
 
-.main_conteiner div div{
-	padding: 1em;
+div.text {
+	margin: 1em;
 }
+
 
 main button{
 	align-self: flex-end;
 	font-size: large;
 	padding: 0.5em;
-	margin: 2em;
+	margin: 1em;
 	cursor: pointer;
 }
 
@@ -116,7 +123,31 @@ footer {
 	color: #FF7800
 }
 
+@media screen and (max-width: 1600px) {
+	.main_conteiner{
+		display: flex;
+		flex-flow: row wrap;
+	}
+	.conteiner_first{
+		flex: 1 1;
+		flex-basis: 30%;
+		height: auto;
+	}
+	.conteiner_second{
+		flex: 1 1;
+		flex-basis: 30%;
+	}
+	.conteiner_third {
+		flex: 2 1;
+		flex-basis: 60%;
+	}
+}
+
 @media screen and (max-width: 800px) {
+	.main_conteiner{
+		display: flex;
+		flex-flow: row wrap;
+	}
 	menu {
 		position: relative;
 		min-height: 3em;
@@ -135,6 +166,7 @@ footer {
 	menu .mobile-button {
 		display: flex; /* показывать только текущие активные <li> пункты */
 		background: #C4F0EF;
+		justify-content: center;
 	}
 	menu .mobile-button a {
 		width: 100%;
@@ -150,7 +182,7 @@ footer {
 		background: #B8E4E2;
 	}
 	menu a {
-		width: 100% 
+		width: 100%;
 		padding: 1em 1em 0.5em 1.5em;
 		border: 0;
 		font-size: 1em;
@@ -167,3 +199,18 @@ footer {
 	menu ul:hover .mobile-button {
 		background: #C4F0EF;
 	}
+
+	.conteiner_first{
+		flex: 3 1;
+		flex-basis: 500px;
+		height: auto;
+	}
+	.conteiner_second{
+		flex: 3 1;
+		flex-basis: 500px;
+	}
+	.conteiner_third {
+		flex: 3 1;
+		flex-basis: 500px;
+	}
+}
