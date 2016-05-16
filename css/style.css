@@ -1,6 +1,6 @@
 html{
 	margin: 0;	
-	padding: 0;
+	padding: 0;	
 	height: 100%;
 }
 body {
@@ -8,8 +8,8 @@ body {
 	padding: 0;
 	background-color: #F2F6FE;
 	font-family: Verdana;
-	height: 100%;
 	padding-bottom: 1em;
+	height: 83%;
 }
 
 menu {
@@ -53,10 +53,10 @@ menu .mobile-button a {
 main {
 	min-height: 100%;
 	padding-bottom: 2em;
-	display: -webkit-flex;
 	display: flex;
 	margin: 1em;
 	flex-flow: row wrap;
+	align-items: stretch;
 	justify-content: space-around;
 }
 
@@ -116,7 +116,6 @@ main button{
 }
 
 footer {
-	/*position: fixed;*/
 	width: 100%;
 	margin-top: -2em;
 	height: 2em;
