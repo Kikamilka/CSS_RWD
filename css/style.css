@@ -1,12 +1,15 @@
 html{
 	margin: 0;	
 	padding: 0;
+	height: 100%;
 }
 body {
 	margin: 0;	
 	padding: 0;
 	background-color: #F2F6FE;
 	font-family: Verdana;
+	height: 100%;
+	padding-bottom: 1em;
 }
 
 menu {
@@ -37,7 +40,7 @@ menu a {
 	background: linear-gradient(to right, #B8E4E2, #FFFFFF);
 }
 menu a:hover {
-	color: #000;
+	color: #FF0054;
 }
 menu .mobile-button a {
 	display: none;
@@ -48,10 +51,9 @@ menu .mobile-button a {
 }
 
 main {
+	min-height: 100%;
+	padding-bottom: 2em;
 	display: -webkit-flex;
-	display: -moz-flex;
-	display: -ms-flex;
-	display: -o-flex;
 	display: flex;
 	margin: 1em;
 	flex-flow: row wrap;
@@ -101,7 +103,6 @@ div.text {
 	margin: 1em;
 }
 
-
 main button{
 	align-self: flex-end;
 	font-size: large;
@@ -112,14 +113,18 @@ main button{
 
 .main_conteiner div div img{
 	padding: 0.5em;
-	max-width: 100%;
 }
 
 footer {
+	/*position: fixed;*/
+	width: 100%;
+	margin-top: -2em;
+	height: 2em;
+	padding-top: 1em; 
 	text-align: center;
+	align-content: center;
 	background: #FFEFD0;
 	font-size: large;
-	padding: 1em;
 	color: #FF7800
 }
 
@@ -141,6 +146,9 @@ footer {
 		flex: 2 1;
 		flex-basis: 60%;
 	}
+	footer {
+		position: absolute;
+	}
 }
 
 @media screen and (max-width: 800px) {
@@ -150,11 +158,11 @@ footer {
 	}
 	menu {
 		position: relative;
-		min-height: 3em;
+		padding-left: 0;
 	}	
 
 	menu ul {
-		width: 50%;
+		width: 100%;
 		border: solid 1px #aaa;
 		border-radius: 5px;
 		box-shadow: 0 1px 2px rgba(0,0,0,.3);
@@ -166,7 +174,7 @@ footer {
 	
 	menu a {
 		width: 100%;
-		padding: 1em 1em 0.5em 1em;
+		/*padding: 1em 1em 0.5em 1em;*/
 		border-bottom: 1px black;
 		font-size: 1em;
 		border-radius: 0;
@@ -175,13 +183,6 @@ footer {
 	menu .mobile-button a {
 		display: flex;
 	}
-
-	/*menu ul:hover li {
-		display: flex;
-	}
-	/*menu ul:hover .mobile-button {
-		background: #C4F0EF;
-	}*/
 
 	.conteiner_first{
 		flex: 3 1;
